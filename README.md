@@ -1,3 +1,3 @@
-Calculator Final Project for the Odin Project.
-In this, I display the skills I've developed throughout doing this self taught course throughout
-the past few months of working. I've gathered strong foundational skills for html, css, and javascript.
+# Calculator Final for the Odin Project
+So far I've developed strong foundations in css, html, and javascript and hope to display here what i've learned
+throughout the foundation course.
