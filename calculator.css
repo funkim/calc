@@ -23,4 +23,12 @@ body {
     height: 8vh;
     width: 40vh;
     margin: 4vh;
+    flex-wrap: wrap;
+}
+
+.output {
+    text-decoration:dotted;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 0vh;
 }
