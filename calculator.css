@@ -4,14 +4,14 @@ body {
 }
 .calc {
     display: flex;
-    align-content: start;
-    justify-content: center;
     box-shadow: 8px 12px gray;
     background-color: black;
     width: 50vh;
     height: 80vh;
     border-style: groove;
     border-radius: 5vh;
+    flex-direction: column;
+    flex-wrap:wrap;
 }
 
 .outputDisplay {
@@ -19,7 +19,6 @@ body {
     align-items: end;
     justify-content: start;
     background-color: aliceblue;
-    flex: auto;
     height: 8vh;
     width: 40vh;
     margin: 4vh;
@@ -31,4 +30,16 @@ body {
     font-size: 40px;
     font-weight: bold;
     line-height: 0vh;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+}
+
+.buttons {
+    padding: 2vh;
+    margin: 2vh;
+    border: 1vh;
 }
