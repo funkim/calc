@@ -36,10 +36,26 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex: auto;
+    align-items:center ;
+    justify-content: center;
 }
 
 .buttons {
-    padding: 2vh;
+    display: flex;
+    padding: 3vh;
     margin: 2vh;
-    border: 1vh;
+    max-height: 3vh;
+    max-width: 7vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonsBottom {
+    display: flex;
+    padding: 4vh;
+    margin: 3vh;
+    max-height: 3vh;
+    max-width: 8vh;
+    justify-content: center;
+    align-items: center;
 }
