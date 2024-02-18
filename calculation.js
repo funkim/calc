@@ -41,14 +41,43 @@ function makeEquation() {
 }
 
 enter.addEventListener("click", function() {
+    displayableInputs = []
     makeEquation()
     const regex = /(-?\d+)([+*\/-])(-?\d+)/; 
-    splitInputs = combinedInputs.match(regex)
-    firstNumbers = splitInputs[1] 
-    operator = splitInputs[2]
-    secondNumbers = splitInputs[3] 
-})
+    const splitInputs = combinedInputs.match(regex)
+    const firstNumber = splitInputs[1] 
+    const operator = splitInputs[2]
+    const secondNumber = splitInputs[3] 
+    if (splitInputs) {
+        const firstNumber = parseFloat(splitInputs[1]); 
+        const operator = splitInputs[2];
+        const secondNumber = parseFloat(splitInputs[3]); 
 
+        let result;
+        switch (operator) {
+            case '+':
+                result = firstNumber + secondNumber;
+                break;
+            case '-':
+                result = firstNumber - secondNumber;
+                break;
+            case '*':
+                result = firstNumber * secondNumber;
+                break;
+            case '/':
+                result = firstNumber / secondNumber;
+                break;
+            default:
+                result = 'Invalid operator';
+        }
+
+        output.innerText = result.toString();
+    } else {
+        output.innerText = 'Invalid input';
+    }
+
+    displayableInputs = [];
+});
 
 clearAll.addEventListener("click", function(){
     displayableInputs = []
