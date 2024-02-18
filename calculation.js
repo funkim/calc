@@ -1,12 +1,13 @@
-let savedInputs = [""]
-let displayableInputs = [""]
+let savedInputs = []
+let displayableInputs = []
+let isOperatorUsed = false;
 const output = document.querySelector(".output")
+
 function showResult() {
     const displayText = displayableInputs.join("")
     output.innerText = displayText;
     return output
 }
-
 const calculator = document.querySelector(".calc")
 const buttons = document.querySelectorAll("button")
 const clear = document.querySelectorAll(".Clear")
@@ -15,25 +16,33 @@ const enter = document.querySelector(".Enter")
 
 clear.forEach(button =>{
     button.addEventListener("click", function() {
-displayableInputs = [""]
-return displayableInputs
+    displayableInputs = []
+    isOperatorUsed = false
     })
 })
 buttons.forEach(button =>{
-button.addEventListener("click", function() {
+    button.addEventListener("click", function() {
     if(["*", "+", "/", "-"].includes(button.id)) {
-displayableInputs = [""]
-savedInputs.push(button.id)
+        savedInputs.push(button.id)
+        isOperatorUsed = true;
     } else {
-displayableInputs.push(button.id)
-showResult()
+    if (isOperatorUsed) {
+        displayableInputs = [];
+        isOperatorUsed = false;
     }
-})
-})
+        savedInputs.push(button.id)
+        displayableInputs.push(button.id)
+        showResult();
+        }
+    }); 
+});
+
+
+
 
 clearAll.addEventListener("click", function(){
-displayableInputs = [""]
-savedInputs = [""]
-return displayableInputs, savedInputs
+    displayableInputs = []
+    savedInputs = []
+    isOperatorUsed = false
 }
 )
