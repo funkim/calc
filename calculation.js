@@ -6,7 +6,6 @@ const output = document.querySelector(".output")
 function showResult() {
     const displayText = displayableInputs.join("")
     output.innerText = displayText;
-    return output
 }
 const calculator = document.querySelector(".calc")
 const buttons = document.querySelectorAll("button")
@@ -37,7 +36,18 @@ buttons.forEach(button =>{
     }); 
 });
 
+function makeEquation() {
+    combinedInputs = savedInputs.join("")
+}
 
+enter.addEventListener("click", function() {
+    makeEquation()
+    const regex = /(-?\d+)([+*\/-])(-?\d+)/; 
+    splitInputs = combinedInputs.match(regex)
+    firstNumbers = splitInputs[0] 
+    operator = splitInputs[1]
+    secondNumbers = splitInputs[2] 
+})
 
 
 clearAll.addEventListener("click", function(){
