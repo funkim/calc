@@ -71,7 +71,11 @@ enter.addEventListener("click", function() {
                 result = 'Invalid operator';
         }
 
+        if (result % 1 !== 0) {
+        output.innerText = Number(result.toString()).toFixed(2);
+        } else {
         output.innerText = result.toString();
+        }
     } else {
         output.innerText = 'Invalid input';
     }
