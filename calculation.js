@@ -49,9 +49,9 @@ enter.addEventListener("click", function() {
     const operator = splitInputs[2]
     const secondNumber = splitInputs[3] 
     if (splitInputs) {
-        const firstNumber = parseFloat(splitInputs[1]); 
-        const operator = splitInputs[2];
-        const secondNumber = parseFloat(splitInputs[3]); 
+        firstNumber = parseFloat(splitInputs[1]); 
+        operator = splitInputs[2];
+        secondNumber = parseFloat(splitInputs[3]); 
 
         let result;
         switch (operator) {
@@ -87,5 +87,6 @@ clearAll.addEventListener("click", function(){
     displayableInputs = []
     savedInputs = []
     isOperatorUsed = false
+    showResult()
 }
 )
