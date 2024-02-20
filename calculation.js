@@ -45,9 +45,9 @@ enter.addEventListener("click", function() {
     makeEquation()
     const regex = /(-?\d+)([+*\/-])(-?\d+)/; 
     const splitInputs = combinedInputs.match(regex)
-    const firstNumber = splitInputs[1] 
-    const operator = splitInputs[2]
-    const secondNumber = splitInputs[3] 
+    let firstNumber = splitInputs[1] 
+    let operator = splitInputs[2]
+    let secondNumber = splitInputs[3] 
     if (splitInputs) {
         firstNumber = parseFloat(splitInputs[1]); 
         operator = splitInputs[2];
