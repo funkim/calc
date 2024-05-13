@@ -1,4 +1,4 @@
-body {
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,6 +15,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   padding: 10px;
+  box-shadow: 2px 4px 8px #585858;
 }
 
 .outputDisplay {
@@ -22,7 +23,7 @@ body {
   align-items: center;
   justify-content: end;
   background-color: aliceblue;
-  height: 50%;
+  min-height: 50%;
   margin: 3vh;
   border-radius: 10px;
 }
@@ -31,6 +32,7 @@ body {
   padding-right: 10px;
   font-size: 2rem;
   font-weight: 300;
+  height: 20px;
 }
 
 .buttonContainer {
@@ -42,7 +44,7 @@ body {
 
 .mainButtons {
   grid-column: 1 / 6;
-  grid-row: 1 / 8;
+  grid-row: 1 / 6;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -55,7 +57,7 @@ body {
   font-size: 1.5rem;
 }
 
-.bstyle:click {
+.bstyle:active {
   background-color: aqua;
   opacity: 50;
 }
